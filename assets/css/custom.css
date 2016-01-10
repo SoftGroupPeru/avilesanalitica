@@ -1,0 +1,53 @@
+/* Add here all your css styles (customizations) */
+.menu_active{
+  color: #27d7e7!important;
+  border-top-color: #27d7e7!important;
+  font-weight: bold!important;
+}
+
+/*imagenes de home*/
+.illustration-v3.aviles-home1, .illustration-v3.aviles-home2, .illustration-v3.aviles-home3,
+.illustration-v3.aviles-home4, .illustration-v3.aviles-home5, .illustration-v3.aviles-home6,
+.illustration-v3.aviles-home7, .illustration-v3.aviles-home8, .illustration-v3.aviles-home9 {
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+
+.illustration-v3.aviles-home1 {
+	background-image: url(../../images/home/1.jpg);
+}
+.illustration-v3.aviles-home2 {
+	background-image: url(../../images/home/2.jpg);
+}
+.illustration-v3.aviles-home3 {
+	background-image: url(../../images/home/3.jpg);
+}
+.illustration-v3.aviles-home4 {
+	background-image: url(../../images/home/4.jpg);
+}
+.illustration-v3.aviles-home5 {
+	background-image: url(../../images/home/5.jpg);
+}
+.illustration-v3.aviles-home6 {
+	background-image: url(../../images/home/6.jpg);
+}
+.illustration-v3.aviles-home7 {
+	background-image: url(../../images/home/7.jpg);
+}
+.illustration-v3.aviles-home8 {
+	background-image: url(../../images/home/8.jpg);
+}
+.illustration-v3.aviles-home9 {
+	background-image: url(../../images/home/9.jpg);
+}
+
+.illustration-v3.aviles-home1:hover, .illustration-v3.aviles-home2:hover, .illustration-v3.aviles-home3:hover,
+.illustration-v3.aviles-home4:hover, .illustration-v3.aviles-home5:hover, .illustration-v3.aviles-home6:hover,
+.illustration-v3.aviles-home7:hover, .illustration-v3.aviles-home8:hover, .illustration-v3.aviles-home9:hover {
+	-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+}
