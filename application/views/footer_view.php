@@ -119,6 +119,8 @@
 <script src="<?php echo $url;?>assets/plugins/jquery/jquery.min.js"></script>
 <script src="<?php echo $url;?>assets/plugins/jquery/jquery-migrate.min.js"></script>
 <script src="<?php echo $url;?>assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="<?php echo $url;?>assets/js/plugins/jquery.cloud9carousel.js"></script>
 <!-- JS Implementing Plugins -->
 <script src="<?php echo $url;?>assets/plugins/back-to-top.js"></script>
 <script src="<?php echo $url;?>assets/plugins/smoothScroll.js"></script>
@@ -145,11 +147,18 @@
 
 <script>
     jQuery(document).ready(function() {
+
         App.init();
         App.initScrollBar();
         App.initParallaxBg();
         OwlCarousel.initOwlCarousel();
         RevolutionSlider.initRSfullWidth();
+				$("#carousel").Cloud9Carousel( {
+			  buttonLeft: $("#buttons > .left"),
+			  buttonRight: $("#buttons > .right"),
+			  autoPlay: 1,
+			  bringToFront: true
+			} );
     });
 </script>
 <?php
@@ -164,6 +173,7 @@ if(isset($contacto)){
 </script>
 <?php }
 ?>
+
 
 <!--[if lt IE 9]>
 <script src="<?php echo $url;?>assets/plugins/respond.js"></script>

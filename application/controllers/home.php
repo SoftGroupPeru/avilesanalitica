@@ -18,8 +18,6 @@ class Home extends CI_Controller {
 		$this->load->view('footer_view', $this->data);
 	}
 
-
-
 }
 
 

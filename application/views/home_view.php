@@ -243,10 +243,41 @@
     </div>
     <!--=== End Slider ===-->
 
-    <!--=== Product Content ===-->
-    <div class="container content-md">
+<div class="container content-md">
 
-        <!--=== Illustration v3 ===-->
+  <div class="heading heading-v1 margin-bottom-20">
+      <h2>Nuestras Marcas</h2>
+</div>
+
+  <div class="row">
+    <div class="col-md-12 md-margin-bottom-30">
+
+      <div id="carousel" style="width:auto; height:500px;overflow:scroll;">
+        <a href="#"><img class="cloud9-item" width="350" src="<?php echo $url; ?>images/home/0.jpg" alt="Item #1"></a>
+        <a href="#"><img class="cloud9-item" width="350" src="<?php echo $url; ?>images/home/1.jpg" alt="Item #1"></a>
+        <a href="#"><img class="cloud9-item" width="350" src="<?php echo $url; ?>images/home/2.jpg" alt="Item #2"></a>
+        <a href="#"><img class="cloud9-item" width="350" src="<?php echo $url; ?>images/home/3.jpg" alt="Item #3"></a>
+        <a href="#"><img class="cloud9-item" width="350" src="<?php echo $url; ?>images/home/4.jpg" alt="Item #4"></a>
+        <a href="#"><img class="cloud9-item" width="350" src="<?php echo $url; ?>images/home/5.jpg" alt="Item #5"></a>
+        <a href="#"><img class="cloud9-item" width="350" src="<?php echo $url; ?>images/home/6.jpg" alt="Item #6"></a>
+        <a href="#"><img class="cloud9-item" width="350" src="<?php echo $url; ?>images/home/7.jpg" alt="Item #7"></a>
+        <a href="#"><img class="cloud9-item" width="350" src="<?php echo $url; ?>images/home/8.jpg" alt="Item #8"></a>
+        <a href="#"><img class="cloud9-item" width="350" src="<?php echo $url; ?>images/home/9.jpg" alt="Item #9"></a>
+      </div>
+  <!--    <div id="buttons">
+        <button class="left">
+          <-
+        </button>
+        <button class="right">
+          ->
+        </button>
+      </div> -->
+    </div>
+  </div>
+<!--
+<div class="container content-md">
+
+
         <div class="row margin-bottom-50">
             <div class="col-md-4 md-margin-bottom-30">
                 <div class="overflow-h">
@@ -291,9 +322,7 @@
                 </div>
             </div>
         </div>
-        <!--=== End Illustration v3 ===-->
 
-        <!--=== Illustration v3 ===-->
         <div class="row margin-bottom-50">
             <div class="col-md-4 md-margin-bottom-30">
                 <div class="overflow-h">
@@ -338,9 +367,7 @@
                 </div>
             </div>
         </div>
-        <!--=== End Illustration v3 ===-->
 
-        <!--=== Illustration v3 ===-->
         <div class="row margin-bottom-50">
             <div class="col-md-4 md-margin-bottom-30">
                 <div class="overflow-h">
