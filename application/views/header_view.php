@@ -172,8 +172,8 @@
                     <ul class="nav navbar-nav">
                         <!--<li><a href="<?php echo $url;?>">Inicio</a></li>-->
                         <li><a class="<?php echo (isset($nosotros))?'menu_active':''; ?>" href="<?php echo $url;?>nosotros">Nosotros</a></li>
-
-                        <!-- Productos -->
+                        <li><a href="<?php echo $url;?>home/productos">Productos</a></li>
+                        <!-- Productos
                         <li class="dropdown">
                             <a class="<?php echo (isset($productos))?'menu_active':''; ?>" href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
                                 Productos
@@ -219,7 +219,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <!-- End Productos -->
+                         End Productos -->
 
                         <!-- Productos 2 -->
                         <li class="dropdown mega-menu-fullwidth">
