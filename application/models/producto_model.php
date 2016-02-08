@@ -26,14 +26,19 @@
       return $resultado;
     }
 
-    public function totalProductos(){
-      $this->db->select('p.idProducto, p.nombre, p.stock, p.serie, p.parte, p.cantidad, m.nombre as marca');
+    function filas(){
+  		$consulta = $this->db->get('producto');
+  		return  $consulta->num_rows() ;
+  	}
+
+    public function totalProductos($por_pagina,$segmento){
+      $this->db->select('p.idProducto, p.nombre, p.imagen, p.stock, p.serie, p.parte, p.cantidad, m.nombre as marca, p.producto_nuevo as nuevo, p.producto_seminuevo as seminuevo');
       $this->db->from('producto p');
       $this->db->join('marca m', 'm.idMarca = p.Marca_idMarca');
       $this->db->where('p.estado', 1);
-      $this->db->limit(6);
+      $this->db->limit($por_pagina, $segmento);
       $consulta = $this->db->get();
-      $resultado = $consulta->row();
+      $resultado = $consulta->result();
       return $resultado;
     }
 

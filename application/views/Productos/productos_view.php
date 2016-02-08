@@ -133,20 +133,21 @@
                 <div class="filter-results">
                     <div class="row illustration-v2 margin-bottom-30">
 											<?php
-											foreach ($totalProductos as $producto) { ?>
+											foreach ($totalProductos as $producto) {?>
                         <div class="col-md-4">
                             <div class="product-img product-img-brd">
-                                <a href="#"><img class="full-width img-responsive" src="<?php echo $url;?>assets/img/blog/16.jpg" alt=""></a>
+                                <a href="#"><img class="full-width img-responsive" src="<?php echo $url;?>images/productos/<?php echo (isset($producto->imagen))?$producto->imagen:'default.jpg';?>" alt=""></a>
                                 <a class="product-review" href="shop-ui-inner.html">Vista Previa</a>
                                 <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Agregar al carrito</a>
-                                <div class="shop-rgba-dark-green rgba-banner">Nuevo</div>
+                                <?php echo (($producto->seminuevo) == 1)?'<div class="shop-rgba-dark-green rgba-banner" style="top:50px!important;">Seminuevo</div>':'';?>
+                                <?php echo (($producto->nuevo) == 1)?'<div class="shop-rgba-red rgba-banner">Nuevo</div>':'';?>
                             </div>
                             <div class="product-description product-description-brd margin-bottom-30">
                                 <div class="overflow-h margin-bottom-5">
                                     <div class="pull-left">
-                                        <h4 class="title-price"><a href="shop-ui-inner.html"><?php //echo $producto->nombre;?>NOMBRE</a></h4>
-                                        <span class="gender text-uppercase"><?php //echo $producto->marca;?>MARCA</span>
-                                        <span class="gender"><?php // echo $producto->parte;?>PARTE</span>
+                                        <h4 class="title-price"><a href="shop-ui-inner.html"><?php echo $producto->nombre;?></a></h4>
+                                        <span class="gender text-uppercase"><?php echo $producto->marca;?></span>
+                                        <span class="gender"><?php echo $producto->parte;?></span>
                                     </div>
                                     <div class="product-price">
                                         <span class="title-price">S/. 100.00</span>
@@ -165,188 +166,12 @@
                         </div>
 												<?php } ?>
 
-                        
-                    <div class="row illustration-v2 margin-bottom-30">
-                        <div class="col-md-4">
-                            <div class="product-img product-img-brd">
-                                <a href="#"><img class="full-width img-responsive" src="<?php echo $url;?>assets/img/blog/21.jpg" alt=""></a>
-                                <a class="product-review" href="shop-ui-inner.html">Quick review</a>
-                                <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                            </div>
-                            <div class="product-description product-description-brd margin-bottom-30">
-                                <div class="overflow-h margin-bottom-5">
-                                    <div class="pull-left">
-                                        <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                        <span class="gender text-uppercase">Men</span>
-                                        <span class="gender">Suits - Blazers</span>
-                                    </div>
-                                    <div class="product-price">
-                                        <span class="title-price">$95.00</span>
-                                    </div>
-                                </div>
-                                <ul class="list-inline product-ratings">
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating fa fa-star"></i></li>
-                                    <li><i class="rating fa fa-star"></i></li>
-                                    <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="product-img product-img-brd">
-                                <a href="#"><img class="full-width img-responsive" src="<?php echo $url;?>assets/img/blog/22.jpg" alt=""></a>
-                                <a class="product-review" href="shop-ui-inner.html">Quick review</a>
-                                <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                            </div>
-                            <div class="product-description product-description-brd margin-bottom-30">
-                                <div class="overflow-h margin-bottom-5">
-                                    <div class="pull-left">
-                                        <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                        <span class="gender text-uppercase">Men</span>
-                                        <span class="gender">Suits - Blazers</span>
-                                    </div>
-                                    <div class="product-price">
-                                        <span class="title-price">$60.00</span>
-                                        <span class="title-price line-through">$95.00</span>
-                                    </div>
-                                </div>
-                                <ul class="list-inline product-ratings">
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating fa fa-star"></i></li>
-                                    <li><i class="rating fa fa-star"></i></li>
-                                    <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="product-img product-img-brd">
-                                <a href="#"><img class="full-width img-responsive" src="<?php echo $url;?>assets/img/blog/23.jpg" alt=""></a>
-                                <a class="product-review" href="shop-ui-inner.html">Quick review</a>
-                                <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                <div class="shop-rgba-red rgba-banner">Out of stock</div>
-                            </div>
-                            <div class="product-description product-description-brd">
-                                <div class="overflow-h margin-bottom-5">
-                                    <div class="pull-left">
-                                        <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                        <span class="gender text-uppercase">Men</span>
-                                        <span class="gender">Suits - Blazers</span>
-                                    </div>
-                                    <div class="product-price">
-                                        <span class="title-price">$95.00</span>
-                                    </div>
-                                </div>
-                                <ul class="list-inline product-ratings">
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating fa fa-star"></i></li>
-                                    <li><i class="rating fa fa-star"></i></li>
-                                    <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row illustration-v2">
-                        <div class="col-md-4">
-                            <div class="product-img product-img-brd">
-                                <a href="#"><img class="full-width img-responsive" src="<?php echo $url;?>assets/img/blog/16.jpg" alt=""></a>
-                                <a class="product-review" href="shop-ui-inner.html">Quick review</a>
-                                <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                <div class="shop-rgba-dark-green rgba-banner">New</div>
-                            </div>
-                            <div class="product-description product-description-brd margin-bottom-30">
-                                <div class="overflow-h margin-bottom-5">
-                                    <div class="pull-left">
-                                        <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                        <span class="gender text-uppercase">Men</span>
-                                        <span class="gender">Suits - Blazers</span>
-                                    </div>
-                                    <div class="product-price">
-                                        <span class="title-price">$60.00</span>
-                                        <span class="title-price line-through">$95.00</span>
-                                    </div>
-                                </div>
-                                <ul class="list-inline product-ratings">
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating fa fa-star"></i></li>
-                                    <li><i class="rating fa fa-star"></i></li>
-                                    <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="product-img product-img-brd">
-                                <a href="#"><img class="full-width img-responsive" src="<?php echo $url;?>assets/img/blog/17.jpg" alt=""></a>
-                                <a class="product-review" href="shop-ui-inner.html">Quick review</a>
-                                <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                            </div>
-                            <div class="product-description product-description-brd margin-bottom-30">
-                                <div class="overflow-h margin-bottom-5">
-                                    <div class="pull-left">
-                                        <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                        <span class="gender text-uppercase">Men</span>
-                                        <span class="gender">Suits - Blazers</span>
-                                    </div>
-                                    <div class="product-price">
-                                        <span class="title-price">$60.00</span>
-                                        <span class="title-price line-through">$95.00</span>
-                                    </div>
-                                </div>
-                                <ul class="list-inline product-ratings">
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating fa fa-star"></i></li>
-                                    <li><i class="rating fa fa-star"></i></li>
-                                    <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="product-img product-img-brd">
-                                <a href="#"><img class="full-width img-responsive" src="<?php echo $url;?>assets/img/blog/18.jpg" alt=""></a>
-                                <a class="product-review" href="shop-ui-inner.html">Quick review</a>
-                                <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                            </div>
-                            <div class="product-description product-description-brd margin-bottom-30">
-                                <div class="overflow-h margin-bottom-5">
-                                    <div class="pull-left">
-                                        <h4 class="title-price"><a href="shop-ui-inner.html">Double-breasted</a></h4>
-                                        <span class="gender text-uppercase">Men</span>
-                                        <span class="gender">Suits - Blazers</span>
-                                    </div>
-                                    <div class="product-price">
-                                        <span class="title-price">$95.00</span>
-                                    </div>
-                                </div>
-                                <ul class="list-inline product-ratings">
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating-selected fa fa-star"></i></li>
-                                    <li><i class="rating fa fa-star"></i></li>
-                                    <li><i class="rating fa fa-star"></i></li>
-                                    <li class="like-icon"><a data-original-title="Add to wishlist" data-toggle="tooltip" data-placement="left" class="tooltips" href="#"><i class="fa fa-heart"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div><!--/end filter resilts-->
 
                 <div class="text-center">
                     <ul class="pagination pagination-v2">
-                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                        <li><a href="#">1</a></li>
-                        <li class="active"><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                        <?php echo $this->pagination->create_links() ?>
                     </ul>
                 </div><!--/end pagination-->
             </div>
