@@ -11,7 +11,11 @@ class Home extends CI_Controller {
 				 $this->load->model("Producto_model","Producto");
     }
 
-	public function index()
+    public function index(){
+    	$this->load->view('flash');
+    }
+
+	public function index2()
 	{
 		$this->data['home'] = TRUE;
 
